@@ -10,12 +10,49 @@
   gtag('config', 'G-SPPXMQVDVB');
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Stoll Baseball — Fall Camp Nov 28 · Old Orchard Park</title>
-<meta name="description" content="Stoll Baseball Fall Camp with Nolan Stoll — Saturday, November 28, 9 AM–12 PM at Old Orchard Park. $75 early bird this week, $90 after. Plus SBC Academy weekly online training." />
-<meta property="og:title" content="Stoll Baseball Fall Camp — Nov 28" />
-<meta property="og:description" content="9 AM–12 PM at Old Orchard Park. $75 if you sign up this week, $90 after." />
-<meta property="og:image" content="hero.jpg" />
+<title>Stoll Baseball Fall Camp · Nov 28 · Valencia, CA</title>
+<meta name="description" content="Fall baseball camp with Nolan Stoll on Saturday, Nov 28, 9 AM–12 PM at Old Orchard Park in Valencia. It covers hitting, defense and pitching. $75 early bird through Nov 15, $90 after." />
+<link rel="canonical" href="https://stollbaseballcoaching.com/" />
+<meta name="theme-color" content="#0a0a0a" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' font-family='Arial Black,Arial,sans-serif' font-weight='900' font-size='30' text-anchor='middle' fill='%232ecc71'%3ESB%3C/text%3E%3C/svg%3E" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Stoll Baseball" />
+<meta property="og:url" content="https://stollbaseballcoaching.com/" />
+<meta property="og:title" content="Stoll Baseball Fall Camp: Sat, Nov 28" />
+<meta property="og:description" content="9 AM–12 PM at Old Orchard Park, Valencia. Hitting, defense and pitching with Nolan Stoll. $75 early bird through Nov 15, $90 after." />
+<meta property="og:image" content="https://stollbaseballcoaching.com/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://stollbaseballcoaching.com/og.jpg" />
+<link rel="preload" as="image" href="hero-1200.jpg" media="(max-width: 900px)" />
+<link rel="preload" as="image" href="hero-1600.jpg" media="(min-width: 901px)" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Stoll Baseball Fall Camp",
+  "description": "A 3-hour baseball camp with Nolan Stoll focused on hitting, defense and pitching.",
+  "startDate": "2026-11-28T09:00:00-08:00",
+  "endDate": "2026-11-28T12:00:00-08:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "image": "https://stollbaseballcoaching.com/og.jpg",
+  "location": {
+    "@type": "Place",
+    "name": "Old Orchard Park",
+    "address": { "@type": "PostalAddress", "streetAddress": "25023 Avenida Rotella", "addressLocality": "Valencia", "addressRegion": "CA", "postalCode": "91355", "addressCountry": "US" }
+  },
+  "organizer": { "@type": "Person", "name": "Nolan Stoll", "url": "https://stollbaseballcoaching.com/" },
+  "offers": [
+    { "@type": "Offer", "name": "Early bird", "price": "75", "priceCurrency": "USD", "validThrough": "2026-11-15T23:59:59-08:00", "url": "https://stollbaseballcoaching.com/", "availability": "https://schema.org/InStock" },
+    { "@type": "Offer", "name": "Regular", "price": "90", "priceCurrency": "USD", "validFrom": "2026-11-16T00:00:00-08:00", "url": "https://stollbaseballcoaching.com/", "availability": "https://schema.org/InStock" }
+  ]
+}
+</script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -30,6 +67,10 @@
     --banner-h: 2.4rem;
   }
   html { scroll-behavior: smooth; }
+  section, header { scroll-margin-top: calc(var(--banner-h) + 60px); }
+  .addr { display: block; font-family: 'Barlow', sans-serif; font-weight: 400; font-size: 0.82rem; color: var(--muted); letter-spacing: 0; margin-top: 0.15rem; }
+  .cal-link { display: inline-block; margin-top: 0.35rem; font-family: 'Barlow', sans-serif; font-size: 0.8rem; font-weight: 500; color: var(--accent); text-decoration: none; letter-spacing: 0; }
+  .cal-link:hover { text-decoration: underline; }
   body { font-family: 'Barlow', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
   .cond { font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; }
   .container { max-width: 1100px; margin: 0 auto; }
@@ -78,7 +119,7 @@
 
   /* Hero */
   .hero {
-    background: url("hero.jpg") center 30% / cover; min-height: 100vh; position: relative;
+    background: #0a0a0a url("hero-1600.jpg") center 30% / cover; min-height: 100vh; position: relative;
     display: flex; align-items: center; padding: calc(7.5rem + var(--banner-h)) 3rem 4rem;
   }
   .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(10,10,10,0.94) 0%, rgba(10,10,10,0.78) 55%, rgba(10,10,10,0.55) 100%), linear-gradient(to top, rgba(10,10,10,0.7) 0%, transparent 50%); }
@@ -199,6 +240,7 @@
     .academy-wrap { grid-template-columns: 1fr; }
   }
   @media (max-width: 900px) {
+    .hero { background-image: url("hero-1200.jpg"); }
     .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
     .about { grid-template-columns: 1fr; gap: 2.5rem; }
     .about img { max-width: 380px; }
@@ -239,7 +281,7 @@
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#register" class="nav-cta">Register</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
 </nav>
 <div class="drawer" id="drawer">
   <a href="#camp">Camp</a>
@@ -265,9 +307,9 @@
     <aside class="ticket" aria-label="Camp registration">
       <div class="ticket-head"><span>Camp Day</span><span id="spotsTag">Spots are limited</span></div>
       <div class="ticket-body">
-        <div class="ticket-row"><span class="ticket-label">Date</span><span class="ticket-value">Saturday, Nov 28</span></div>
+        <div class="ticket-row"><span class="ticket-label">Date</span><span class="ticket-value">Saturday, Nov 28<a class="cal-link" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Stoll+Baseball+Fall+Camp&dates=20261128T170000Z/20261128T200000Z&location=Old+Orchard+Park,+25023+Avenida+Rotella,+Valencia,+CA+91355&details=Bring+glove,+bat,+helmet,+cleats,+water.+stollbaseballcoaching.com" target="_blank" rel="noopener" style="display:block">+ Add to calendar</a></span></div>
         <div class="ticket-row"><span class="ticket-label">Time</span><span class="ticket-value">9:00 AM – 12:00 PM</span></div>
-        <div class="ticket-row"><span class="ticket-label">Where</span><span class="ticket-value"><a href="https://www.google.com/maps/search/?api=1&query=Old+Orchard+Park" target="_blank" rel="noopener">Old Orchard Park</a></span></div>
+        <div class="ticket-row"><span class="ticket-label">Where</span><span class="ticket-value"><a href="https://www.google.com/maps/search/?api=1&query=Old+Orchard+Park+25023+Avenida+Rotella+Valencia+CA+91355" target="_blank" rel="noopener">Old Orchard Park</a><span class="addr">25023 Avenida Rotella, Valencia</span></span></div>
 
         <div class="price-block">
           <span class="price-now" id="priceNow">$75</span>
@@ -317,7 +359,7 @@
 <section id="about">
   <div class="container">
     <div class="about">
-      <img src="about_photo.jpg" alt="Nolan Stoll" />
+      <img src="about_photo.jpg" alt="Nolan Stoll in catcher's gear" width="643" height="900" loading="lazy" decoding="async" />
       <div>
         <p class="label">Your Coach</p>
         <h2>Nolan Stoll</h2>
@@ -397,7 +439,7 @@
     <p class="label">Questions</p>
     <h2 class="title">FAQ</h2>
     <div class="faq">
-      <details><summary>When and where is camp?</summary><p>Saturday, November 28, from 9:00 AM to 12:00 PM at Old Orchard Park. Please arrive about 10 minutes early to check in.</p></details>
+      <details><summary>When and where is camp?</summary><p>Saturday, November 28, from 9:00 AM to 12:00 PM at Old Orchard Park (25023 Avenida Rotella, Valencia, CA 91355). Please arrive about 10 minutes early to check in.</p></details>
       <details><summary>How much does it cost?</summary><p>$75 if you register by Sunday, November 15. After that, it's $90.</p></details>
       <details><summary>How do I register?</summary><p>Tap any Register button to pay on Venmo (@nolanstoll09). Put the player's name and age in the payment note. Once the payment goes through, the spot is saved.</p></details>
       <details><summary>What should my player bring?</summary><p>A glove, a bat, a helmet, cleats or turf shoes, a water bottle, and a snack. Catchers should bring their gear if they have it.</p></details>
@@ -410,7 +452,7 @@
 <!-- FINAL CTA -->
 <section class="final">
   <div class="container">
-    <p class="label">Nov 28 · 9 AM – 12 PM · Old Orchard Park</p>
+    <p class="label">Nov 28 · 9 AM – 12 PM · Old Orchard Park, Valencia</p>
     <h2 class="title" id="finalTitle">Lock In $75 Before Sunday</h2>
     <p class="intro">Camp spots are limited. Register now to get the early-bird price.</p>
     <a href="#" class="btn btn-primary btn-lg js-register" target="_blank" rel="noopener"><span class="js-price-label">Register for $75</span> →</a>
@@ -472,8 +514,14 @@
 
   /* ── NAV ── */
   const hb = $('hamburger'), dr = $('drawer');
-  hb.addEventListener('click', () => { hb.classList.toggle('open'); dr.classList.toggle('open'); });
-  dr.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hb.classList.remove('open'); dr.classList.remove('open'); }));
+  const setNav = open => { hb.classList.toggle('open', open); dr.classList.toggle('open', open); hb.setAttribute('aria-expanded', open); };
+  hb.addEventListener('click', () => setNav(!dr.classList.contains('open')));
+  dr.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setNav(false)));
+
+  /* ── ANALYTICS: count Register clicks ── */
+  document.querySelectorAll('.js-register').forEach(a => a.addEventListener('click', () => {
+    if (window.gtag) gtag('event', 'register_click', { price: new Date() < EARLY_END ? 75 : 90 });
+  }));
 </script>
 </body>
 </html>
