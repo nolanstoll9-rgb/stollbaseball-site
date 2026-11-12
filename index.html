@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SPPXMQVDVB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SPPXMQVDVB');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stoll Baseball — Fall Camp Nov 28 · Old Orchard Park</title>
+<meta name="description" content="Stoll Baseball Fall Camp with Nolan Stoll — Saturday, November 28, 9 AM–12 PM at Old Orchard Park. $75 early bird this week, $90 after. Plus SBC Academy weekly online training." />
+<meta property="og:title" content="Stoll Baseball Fall Camp — Nov 28" />
+<meta property="og:description" content="9 AM–12 PM at Old Orchard Park. $75 if you sign up this week, $90 after." />
+<meta property="og:image" content="hero.jpg" />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0a0a0a;
+    --bg-2: #141414;
+    --bg-3: #1f1f1f;
+    --accent: #2ecc71;
+    --accent-light: #58e08f;
+    --text: #f5f7f6;
+    --muted: #9fada6;
+    --line: rgba(46, 204, 113, 0.18);
+    --banner-h: 2.4rem;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Barlow', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
+  .cond { font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; }
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  /* Banner */
+  .banner {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 201;
+    background: var(--accent); color: var(--bg);
+    text-align: center; padding: 0.5rem 1rem; height: var(--banner-h);
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+    font-size: clamp(0.72rem, 2.2vw, 0.9rem); letter-spacing: 0.05em; text-transform: uppercase;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-decoration: none; display: block;
+  }
+
+  /* Nav */
+  nav.top {
+    position: fixed; top: var(--banner-h); left: 0; right: 0; z-index: 200;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.9rem 3rem; background: rgba(10,10,10,0.95); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.4rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); text-decoration: none; }
+  .logo span { color: var(--text); }
+  .nav-links { list-style: none; display: flex; align-items: center; gap: 2.2rem; }
+  .nav-links a { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--muted); }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-cta { background: var(--accent); color: var(--bg) !important; padding: 0.55rem 1.3rem; font-weight: 700 !important; }
+  .nav-cta:hover { background: var(--accent-light); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--accent); transition: transform .3s, opacity .3s; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .drawer { display: none; position: fixed; top: calc(var(--banner-h) + 56px); left: 0; right: 0; z-index: 199; background: rgba(10,10,10,0.98); border-bottom: 1px solid var(--line); padding: 1rem 1.5rem 1.5rem; flex-direction: column; }
+  .drawer.open { display: flex; }
+  .drawer a { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.25rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--text); padding: 0.8rem 0; border-bottom: 1px solid rgba(46,204,113,0.1); }
+  .drawer a:last-child { border-bottom: none; color: var(--accent); }
+
+  /* Buttons */
+  .btn { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; display: inline-block; padding: 0.85rem 2rem; cursor: pointer; transition: background .2s, transform .1s, border-color .2s, color .2s; text-align: center; }
+  .btn-primary { background: var(--accent); color: var(--bg); border: none; }
+  .btn-primary:hover { background: var(--accent-light); transform: translateY(-1px); }
+  .btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(245,247,246,0.3); }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+  .btn-lg { font-size: 1.2rem; padding: 1.15rem 3rem; }
+
+  /* Hero */
+  .hero {
+    background: url("hero.jpg") center 30% / cover; min-height: 100vh; position: relative;
+    display: flex; align-items: center; padding: calc(7.5rem + var(--banner-h)) 3rem 4rem;
+  }
+  .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(10,10,10,0.94) 0%, rgba(10,10,10,0.78) 55%, rgba(10,10,10,0.55) 100%), linear-gradient(to top, rgba(10,10,10,0.7) 0%, transparent 50%); }
+  .hero-inner { position: relative; z-index: 2; width: 100%; max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.25fr 1fr; gap: 3.5rem; align-items: center; }
+  .eyebrow { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+  .hero h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(3rem, 7.5vw, 6.2rem); line-height: 0.92; text-transform: uppercase; margin-bottom: 1.4rem; }
+  .hero h1 em { font-style: normal; color: var(--accent); }
+  .hero-tagline { font-size: clamp(1rem, 2vw, 1.15rem); font-weight: 300; line-height: 1.7; color: var(--muted); max-width: 520px; margin-bottom: 2rem; }
+  .hero-tagline strong { color: var(--text); font-weight: 500; }
+  .hero-ctas { display: flex; gap: 0.9rem; flex-wrap: wrap; }
+
+  /* Ticket card */
+  .ticket { background: rgba(20,20,20,0.92); border: 1px solid var(--accent); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+  .ticket-head { background: var(--accent); color: var(--bg); padding: 0.7rem 1.5rem; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.85rem; display: flex; justify-content: space-between; gap: 1rem; }
+  .ticket-body { padding: 1.6rem 1.5rem 1.5rem; }
+  .ticket-row { display: flex; gap: 1rem; padding: 0.75rem 0; border-bottom: 1px solid rgba(46,204,113,0.12); }
+  .ticket-row:first-child { padding-top: 0; }
+  .ticket-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); width: 4.5rem; flex-shrink: 0; padding-top: 0.2rem; }
+  .ticket-value { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.25rem; letter-spacing: 0.02em; }
+  .ticket-value a { color: var(--text); text-decoration: underline; text-decoration-color: rgba(46,204,113,0.5); text-underline-offset: 3px; }
+  .price-block { display: flex; align-items: baseline; gap: 0.8rem; margin: 1.3rem 0 0.3rem; }
+  .price-now { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 3.6rem; line-height: 1; color: var(--accent); }
+  .price-was { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.6rem; color: var(--muted); text-decoration: line-through; }
+  .price-note { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.9rem; line-height: 1.5; }
+  .price-note strong { color: var(--text); font-weight: 500; }
+  .countdown { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem; margin-bottom: 1.2rem; }
+  .countdown div { background: var(--bg-3); text-align: center; padding: 0.5rem 0.2rem; }
+  .countdown b { display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.4rem; line-height: 1.1; }
+  .countdown small { font-family: 'Barlow Condensed', sans-serif; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); }
+  .ticket .btn { width: 100%; }
+  .pay-note { font-size: 0.8rem; color: var(--muted); line-height: 1.5; margin-top: 0.9rem; text-align: center; }
+  .pay-note strong { color: var(--text); font-weight: 500; }
+
+  /* Sections */
+  section { padding: 5.5rem 3rem; position: relative; }
+  .label { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.7rem; }
+  .title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.2rem, 5vw, 3.6rem); text-transform: uppercase; line-height: 1; margin-bottom: 1.2rem; }
+  .intro { font-size: 1rem; font-weight: 300; line-height: 1.8; color: var(--muted); max-width: 640px; margin-bottom: 2.2rem; }
+
+  /* Stats */
+  .stats { background: var(--accent); padding: 0.6rem 2rem; display: flex; justify-content: center; flex-wrap: wrap; }
+  .stat { display: flex; align-items: center; gap: 0.6rem; padding: 0.4rem 1.6rem; border-right: 1px solid rgba(10,10,10,0.2); }
+  .stat:last-child { border-right: none; }
+  .stat b { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.2rem; color: var(--bg); white-space: nowrap; }
+  .stat span { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bg-2); line-height: 1.2; max-width: 95px; }
+
+  /* Camp grid */
+  #camp { background: var(--bg-2); }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--line); border: 1px solid var(--line); }
+  .card { background: var(--bg-2); padding: 1.8rem 1.5rem 2rem; }
+  .card-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 0.75rem; letter-spacing: 0.15em; color: var(--accent); opacity: 0.75; display: block; margin-bottom: 1rem; }
+  .card h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.3rem; text-transform: uppercase; margin-bottom: 0.6rem; }
+  .card p { font-size: 0.88rem; font-weight: 300; color: var(--muted); line-height: 1.65; }
+  .camp-cta { margin-top: 2.5rem; display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+  .camp-cta p { color: var(--muted); font-size: 0.92rem; }
+  .camp-cta p strong { color: var(--accent); }
+
+  /* About */
+  .about { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 4rem; align-items: center; }
+  .about img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center top; border: 1px solid rgba(46,204,113,0.25); display: block; }
+  .about h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.2rem, 4vw, 3.2rem); text-transform: uppercase; line-height: 1; margin-bottom: 0.3rem; }
+  .about .pos { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.4rem; }
+  .about p.bio { font-weight: 300; line-height: 1.8; color: var(--muted); margin-bottom: 1.6rem; }
+  .creds { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem 1.5rem; }
+  .creds li { font-size: 0.92rem; display: flex; gap: 0.7rem; align-items: flex-start; line-height: 1.45; }
+  .creds li::before { content: ''; width: 6px; height: 6px; background: var(--accent); transform: rotate(45deg); margin-top: 7px; flex-shrink: 0; }
+  .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3.5rem; }
+  .quote { border-left: 2px solid var(--accent); padding: 0.4rem 0 0.4rem 1.1rem; color: var(--text); font-size: 0.95rem; line-height: 1.6; font-style: italic; font-weight: 300; }
+  .quote cite { display: block; font-style: normal; font-size: 0.75rem; color: var(--muted); margin-top: 0.4rem; font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.1em; text-transform: uppercase; }
+
+  /* Academy */
+  #academy { background: var(--bg-2); border-top: 1px solid var(--line); }
+  .academy-wrap { display: grid; grid-template-columns: 1fr 1.1fr; gap: 3.5rem; align-items: start; }
+  .inside-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem 1.2rem; margin-bottom: 1.5rem; }
+  .inside-list li { font-size: 0.9rem; color: var(--text); display: flex; gap: 0.5rem; }
+  .inside-list li::before { content: '✓'; color: var(--accent); }
+  .small { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+  .tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .tier { background: var(--bg); border: 1px solid var(--line); padding: 1.6rem 1.4rem; display: flex; flex-direction: column; position: relative; }
+  .tier.featured { border-color: var(--accent); }
+  .tier-badge { position: absolute; top: 0; right: 0; background: var(--accent); color: var(--bg); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.8rem; }
+  .tier h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-size: 1.05rem; margin-bottom: 0.7rem; }
+  .tier .amt { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2.6rem; line-height: 1; }
+  .tier .amt small { font-family: 'Barlow', sans-serif; font-size: 0.8rem; font-weight: 400; color: var(--muted); }
+  .tier .later { font-size: 0.78rem; color: var(--muted); margin: 0.35rem 0 1rem; }
+  .tier ul { list-style: none; font-size: 0.85rem; line-height: 1.45; display: flex; flex-direction: column; gap: 0.45rem; margin-bottom: 1.4rem; flex: 1; }
+  .tier li { display: flex; gap: 0.5rem; }
+  .tier li::before { content: '✓'; color: var(--accent); }
+  .tier .btn { width: 100%; padding: 0.75rem 1rem; font-size: 0.9rem; }
+
+  /* FAQ */
+  .faq { display: flex; flex-direction: column; gap: 0.7rem; max-width: 800px; }
+  details { background: var(--bg-2); border: 1px solid rgba(46,204,113,0.15); }
+  summary { cursor: pointer; padding: 1.1rem 1.4rem; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: '+'; color: var(--accent); font-size: 1.4rem; font-weight: 300; line-height: 1; }
+  details[open] summary::after { content: '−'; }
+  details p { padding: 0 1.4rem 1.2rem; font-size: 0.92rem; color: var(--muted); line-height: 1.7; }
+
+  /* Final CTA */
+  .final { text-align: center; background: linear-gradient(135deg, var(--bg-3) 0%, var(--bg) 100%); border-top: 1px solid var(--line); }
+  .final .intro { margin: 0 auto 2rem; }
+  .final .contact { margin-top: 2rem; font-size: 0.92rem; color: var(--muted); }
+  .final .contact a { color: var(--accent); text-decoration: none; font-weight: 500; }
+
+  footer { border-top: 1px solid var(--line); padding: 2rem 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  footer p { font-size: 0.8rem; color: var(--muted); opacity: 0.6; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+  .hero-copy > * { animation: fadeUp .6s ease both; }
+  .hero-copy > *:nth-child(2) { animation-delay: .08s; }
+  .hero-copy > *:nth-child(3) { animation-delay: .16s; }
+  .hero-copy > *:nth-child(4) { animation-delay: .24s; }
+  .ticket { animation: fadeUp .7s .3s ease both; }
+
+  @media (max-width: 1000px) {
+    .grid { grid-template-columns: 1fr; }
+    .academy-wrap { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .about { grid-template-columns: 1fr; gap: 2.5rem; }
+    .about img { max-width: 380px; }
+    .quotes { grid-template-columns: 1fr; }
+    section { padding: 4.5rem 2rem; }
+    .hero { padding: calc(7rem + var(--banner-h)) 2rem 3.5rem; }
+  }
+  @media (max-width: 768px) {
+    nav.top { padding: 0.9rem 1rem; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .hero { padding: calc(6rem + var(--banner-h)) 1rem 3rem; min-height: auto; }
+    section { padding: 3.5rem 1rem; }
+    .stats { justify-content: flex-start; padding: 0.5rem 1rem; }
+    .stat { padding: 0.45rem 0.9rem; }
+    footer { flex-direction: column; text-align: center; padding: 2rem 1rem; }
+  }
+  @media (max-width: 560px) {
+    .grid, .tiers, .creds, .inside-list { grid-template-columns: 1fr; }
+    .hero-ctas { display: none; }
+    .hero-tagline { margin-bottom: 0; }
+    .btn-lg { padding: 1.05rem 1.5rem; width: 100%; }
+    .banner-extra { display: none; }
+    .ticket-value { font-size: 1.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<a class="banner" href="#register" id="banner">Early bird: $75 camp spots through Sunday<span class="banner-extra"> · $90 starting Nov 16</span></a>
+
+<nav class="top">
+  <a class="logo" href="#">Stoll <span>Baseball</span></a>
+  <ul class="nav-links">
+    <li><a href="#camp">Camp</a></li>
+    <li><a href="#about">Coach</a></li>
+    <li><a href="#academy">Academy</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#register" class="nav-cta">Register</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="drawer" id="drawer">
+  <a href="#camp">Camp</a>
+  <a href="#about">Coach</a>
+  <a href="#academy">Academy</a>
+  <a href="#faq">FAQ</a>
+  <a href="#register">Register for Camp</a>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="register">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Stoll Baseball · Fall Camp</p>
+      <h1>Fall<br><em>Baseball<br>Camp</em></h1>
+      <p class="hero-tagline">A 3-hour, hands-on camp with <strong>Nolan Stoll</strong>, an All-State catcher and CIF champion ranked top-100 in the nation. The camp focuses on <strong>hitting, defense and pitching</strong>.</p>
+      <div class="hero-ctas">
+        <a href="#camp" class="btn btn-outline">What We'll Cover →</a>
+        <a href="#academy" class="btn btn-outline">SBC Academy →</a>
+      </div>
+    </div>
+
+    <aside class="ticket" aria-label="Camp registration">
+      <div class="ticket-head"><span>Camp Day</span><span id="spotsTag">Spots are limited</span></div>
+      <div class="ticket-body">
+        <div class="ticket-row"><span class="ticket-label">Date</span><span class="ticket-value">Saturday, Nov 28</span></div>
+        <div class="ticket-row"><span class="ticket-label">Time</span><span class="ticket-value">9:00 AM – 12:00 PM</span></div>
+        <div class="ticket-row"><span class="ticket-label">Where</span><span class="ticket-value"><a href="https://www.google.com/maps/search/?api=1&query=Old+Orchard+Park" target="_blank" rel="noopener">Old Orchard Park</a></span></div>
+
+        <div class="price-block">
+          <span class="price-now" id="priceNow">$75</span>
+          <span class="price-was" id="priceWas">$90</span>
+        </div>
+        <p class="price-note" id="priceNote">Early-bird price if you <strong>sign up by Sunday, Nov 15</strong>. Goes to $90 after that.</p>
+        <div class="countdown" id="countdown" aria-label="Time left for early-bird pricing">
+          <div><b id="cdD">0</b><small>Days</small></div>
+          <div><b id="cdH">0</b><small>Hrs</small></div>
+          <div><b id="cdM">0</b><small>Min</small></div>
+          <div><b id="cdS">0</b><small>Sec</small></div>
+        </div>
+        <a href="#" class="btn btn-primary btn-lg js-register" target="_blank" rel="noopener" id="ticketBtn">Register for $75 →</a>
+        <p class="pay-note">Pay on Venmo <strong>@nolanstoll09</strong>. Put the <strong>player's name and age</strong> in the note. Your spot is held once payment goes through.</p>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stat"><b>2×</b><span>All-State Honoree</span></div>
+  <div class="stat"><b>#10</b><span>Catcher in California</span></div>
+  <div class="stat"><b>#80</b><span>Nationally Ranked</span></div>
+  <div class="stat"><b>CIF</b><span>Southern Section Champion</span></div>
+  <div class="stat"><b>Brewers</b><span>Scout Team</span></div>
+</div>
+
+<!-- CAMP -->
+<section id="camp">
+  <div class="container">
+    <p class="label">The Camp</p>
+    <h2 class="title">3 Hours of Training</h2>
+    <p class="intro">Three hours of hands-on coaching from Nolan, focused on hitting, defense and pitching. Every player leaves with drills to keep working on at home.</p>
+    <div class="grid">
+      <div class="card"><span class="card-num">01</span><h3>Hitting</h3><p>Swing mechanics, approach at the plate, and drills that build a repeatable, powerful swing.</p></div>
+      <div class="card"><span class="card-num">02</span><h3>Defense</h3><p>Footwork, glove work and catching fundamentals that carry over to every position on the field.</p></div>
+      <div class="card"><span class="card-num">03</span><h3>Pitching</h3><p>Mechanics, command and arm care, so players throw harder and stay healthy.</p></div>
+    </div>
+    <div class="camp-cta">
+      <a href="#" class="btn btn-primary btn-lg js-register" target="_blank" rel="noopener"><span class="js-price-label">Register for $75</span> →</a>
+      <p id="campCtaNote"><strong>$75</strong> through Sunday, Nov 15 · $90 after</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about">
+      <img src="about_photo.jpg" alt="Nolan Stoll" />
+      <div>
+        <p class="label">Your Coach</p>
+        <h2>Nolan Stoll</h2>
+        <p class="pos">Catcher · Founder, SBC Academy</p>
+        <p class="bio">Nolan teaches the same training that got him recruited at the top level of amateur baseball. He keeps it simple and hands-on, and gives each player feedback they can actually use.</p>
+        <ul class="creds">
+          <li>CIF Southern Section Champion (2025)</li>
+          <li>All-CIF selection as a senior</li>
+          <li>Two-time All-State honoree</li>
+          <li>Two-time All-Foothill League 1st Team</li>
+          <li>Milwaukee Brewers Scout Team</li>
+          <li>Perfect Game: #10 C in CA, #80 nationally</li>
+        </ul>
+      </div>
+    </div>
+    <div class="quotes">
+      <blockquote class="quote">“More knowledgeable than any coaches out here working with players. Nolan is who you want your player to learn from!!”<cite>— Camp parent</cite></blockquote>
+      <blockquote class="quote">“It was a great day of baseball! Thank you.”<cite>— Camp parent</cite></blockquote>
+      <blockquote class="quote">“Mason had a blast! Thank you!”<cite>— Camp parent</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ACADEMY (condensed) -->
+<section id="academy">
+  <div class="container">
+    <div class="academy-wrap">
+      <div>
+        <p class="label">Keep Training After Camp</p>
+        <h2 class="title">SBC Academy</h2>
+        <p class="intro" style="margin-bottom:1.5rem">A monthly membership with a private Discord. Nolan posts a new training video every week. The focus is hitting, and it also covers the rest of the game.</p>
+        <ul class="inside-list">
+          <li>Weekly training drop</li>
+          <li>Hitting &amp; catching</li>
+          <li>Fielding</li>
+          <li>At-home throwing &amp; strength</li>
+          <li>Mental game</li>
+          <li>Film room &amp; Ask Coach</li>
+          <li>Recruiting &amp; The Vault</li>
+          <li>Live calls &amp; members chat</li>
+        </ul>
+        <p class="small">Cancel anytime. Billing is handled through Whop. Refer a friend and you get a free month.</p>
+      </div>
+      <div class="tiers">
+        <div class="tier featured">
+          <span class="tier-badge">Early Access</span>
+          <h3>Founding Member</h3>
+          <div class="amt">$24.99 <small>/ mo</small></div>
+          <p class="later">Locked in for life · $34.99 for later members</p>
+          <ul>
+            <li>Everything in The Academy</li>
+            <li>New video every week</li>
+            <li>At-home throwing &amp; strength drills</li>
+          </ul>
+          <a href="https://whop.com/sbc-academy/sbc-academy-founding-member" target="_blank" rel="noopener" class="btn btn-primary">Join for $24.99 →</a>
+        </div>
+        <div class="tier">
+          <span class="tier-badge" style="background:var(--text)">Founders</span>
+          <h3>Founders VIP</h3>
+          <div class="amt">$34.99 <small>/ mo</small></div>
+          <p class="later">Locked in for life · $49.99 for later members</p>
+          <ul>
+            <li>Everything in Founding Member</li>
+            <li>Full throwing &amp; lifting programs</li>
+            <li>VIP film breakdowns, VIP chat &amp; live calls</li>
+          </ul>
+          <a href="https://whop.com/sbc-academy/sbc-academy-founding-vip" target="_blank" rel="noopener" class="btn btn-outline">Get Founders VIP →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <p class="label">Questions</p>
+    <h2 class="title">FAQ</h2>
+    <div class="faq">
+      <details><summary>When and where is camp?</summary><p>Saturday, November 28, from 9:00 AM to 12:00 PM at Old Orchard Park. Please arrive about 10 minutes early to check in.</p></details>
+      <details><summary>How much does it cost?</summary><p>$75 if you register by Sunday, November 15. After that, it's $90.</p></details>
+      <details><summary>How do I register?</summary><p>Tap any Register button to pay on Venmo (@nolanstoll09). Put the player's name and age in the payment note. Once the payment goes through, the spot is saved.</p></details>
+      <details><summary>What should my player bring?</summary><p>A glove, a bat, a helmet, cleats or turf shoes, a water bottle, and a snack. Catchers should bring their gear if they have it.</p></details>
+      <details><summary>What ages and skill levels is camp for?</summary><p>Players of all levels are welcome. Coaching is adjusted to each player. If you have a question about your player, message Nolan on Instagram.</p></details>
+      <details><summary>What is SBC Academy? Do I need it for camp?</summary><p>No, camp is separate. SBC Academy is an optional monthly online membership with weekly training videos in a private Discord. It's a good way to keep working on what you learn at camp.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="container">
+    <p class="label">Nov 28 · 9 AM – 12 PM · Old Orchard Park</p>
+    <h2 class="title" id="finalTitle">Lock In $75 Before Sunday</h2>
+    <p class="intro">Camp spots are limited. Register now to get the early-bird price.</p>
+    <a href="#" class="btn btn-primary btn-lg js-register" target="_blank" rel="noopener"><span class="js-price-label">Register for $75</span> →</a>
+    <p class="contact">Questions? DM <a href="https://instagram.com/stollbaseballcoaching" target="_blank" rel="noopener">@stollbaseballcoaching</a> on Instagram.</p>
+  </div>
+</section>
+
+<footer>
+  <a class="logo" href="#">Stoll <span>Baseball</span></a>
+  <p>© 2026 Stoll Baseball · SBC Academy. All rights reserved.</p>
+</footer>
+
+<script>
+  /* ── CONFIG ── Registration = pay on Venmo @nolanstoll09 */
+  const VENMO_USER = 'nolanstoll09';
+  // Early-bird ends Sunday Nov 15, 2026 at 11:59:59 PM Pacific
+  const EARLY_END = new Date('2026-11-16T07:59:59Z');
+  const CAMP_START = new Date('2026-11-28T17:00:00Z'); // 9 AM Pacific
+
+  function setRegisterLinks(amount) {
+    const note = encodeURIComponent('Fall Camp Nov 28 - Player name & age: ');
+    const url = `https://venmo.com/${VENMO_USER}?txn=pay&amount=${amount}&note=${note}`;
+    document.querySelectorAll('.js-register').forEach(a => a.href = url);
+  }
+  setRegisterLinks(new Date() < EARLY_END ? 75 : 90);
+
+  const $ = id => document.getElementById(id);
+  function tick() {
+    const now = new Date();
+    const left = EARLY_END - now;
+    if (left > 0) {
+      const s = Math.floor(left / 1000);
+      $('cdD').textContent = Math.floor(s / 86400);
+      $('cdH').textContent = Math.floor(s % 86400 / 3600);
+      $('cdM').textContent = Math.floor(s % 3600 / 60);
+      $('cdS').textContent = s % 60;
+      return;
+    }
+    // Early bird is over → switch everything to $90
+    clearInterval(timer);
+    $('countdown').style.display = 'none';
+    $('priceNow').textContent = '$90';
+    $('priceWas').style.display = 'none';
+    $('ticketBtn').textContent = 'Register for $90 →';
+    setRegisterLinks(90);
+    document.querySelectorAll('.js-price-label').forEach(el => el.textContent = 'Register for $90');
+    $('campCtaNote').innerHTML = 'Early-bird pricing has ended · <strong>$90</strong> per player';
+    $('finalTitle').textContent = 'Save Your Spot';
+    if (now >= CAMP_START) {
+      $('priceNote').textContent = 'This camp is over. Message Nolan to hear about the next one.';
+      $('banner').textContent = 'Fall camp is done. DM @stollbaseballcoaching to hear about the next one';
+    } else {
+      $('priceNote').innerHTML = 'Registration is still open. <strong>Spots are limited.</strong>';
+      $('banner').innerHTML = 'Fall Camp · Sat Nov 28 · 9 AM – 12 PM<span class="banner-extra"> · Old Orchard Park · Register now</span>';
+    }
+  }
+  const timer = setInterval(tick, 1000);
+  tick();
+
+  /* ── NAV ── */
+  const hb = $('hamburger'), dr = $('drawer');
+  hb.addEventListener('click', () => { hb.classList.toggle('open'); dr.classList.toggle('open'); });
+  dr.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hb.classList.remove('open'); dr.classList.remove('open'); }));
+</script>
+</body>
+</html>
