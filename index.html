@@ -169,7 +169,10 @@
   .field-row { display: grid; grid-template-columns: 1fr 6.5rem; gap: 0.8rem; }
   fieldset.field { border: none; }
   .chips { display: flex; flex-wrap: wrap; gap: 0.45rem; }
-  .chip input { position: absolute; opacity: 0; pointer-events: none; }
+  .chip { position: relative; }
+  .chip input { position: absolute; inset: 0; opacity: 0; pointer-events: none; margin: 0; }
+  .chip input:checked + span::before { content: '✓ '; }
+  .pos-count { color: var(--accent) !important; font-weight: 600 !important; margin-left: 0.3rem; }
   .chip span { display: inline-block; padding: 0.5rem 0.85rem; border: 1px solid rgba(245,247,246,0.25); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; user-select: none; }
   .chip input:checked + span { background: var(--accent); border-color: var(--accent); color: var(--bg); }
   .chip input:focus-visible + span { outline: 2px solid var(--accent-light); outline-offset: 2px; }
@@ -500,7 +503,7 @@
       </div>
       <div class="field"><label for="fEmail">Parent email</label><input type="email" id="fEmail" name="parent_email" autocomplete="email" required maxlength="120" /></div>
       <fieldset class="field">
-        <legend>Positions <small>(pick all that apply)</small></legend>
+        <legend>Positions <small>(tap every position they play)</small> <small class="pos-count" id="posCount" aria-live="polite"></small></legend>
         <div class="chips">
           <label class="chip"><input type="checkbox" name="pos" value="Pitcher" /><span>Pitcher</span></label>
           <label class="chip"><input type="checkbox" name="pos" value="Catcher" /><span>Catcher</span></label>
@@ -601,6 +604,21 @@
   }));
   $('regClose').addEventListener('click', () => dlg.close());
   form.addEventListener('input', () => { err.textContent = ''; });
+
+  // Positions: multi-select, but "Not sure yet" and specific positions cancel each other out.
+  const posBoxes = [...form.querySelectorAll('input[name=pos]')];
+  const updatePosCount = () => {
+    const n = posBoxes.filter(b => b.checked).length;
+    $('posCount').textContent = n ? `· ${n} selected` : '';
+  };
+  posBoxes.forEach(b => b.addEventListener('change', () => {
+    if (b.checked) {
+      const unsure = b.value === 'Not sure yet';
+      posBoxes.forEach(o => { if (o !== b && (unsure || o.value === 'Not sure yet')) o.checked = false; });
+    }
+    updatePosCount();
+  }));
+  form.addEventListener('reset', () => setTimeout(updatePosCount));
   dlg.addEventListener('click', ev => { if (ev.target === dlg) dlg.close(); });
 
   form.addEventListener('submit', async ev => {
