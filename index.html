@@ -153,6 +153,35 @@
   .pay-note { font-size: 0.8rem; color: var(--muted); line-height: 1.5; margin-top: 0.9rem; text-align: center; }
   .pay-note strong { color: var(--text); font-weight: 500; }
 
+  /* Registration dialog */
+  dialog.reg { border: 1px solid var(--accent); background: var(--bg-2); color: var(--text); padding: 0; width: min(520px, calc(100vw - 2rem)); max-height: calc(100dvh - 2rem); overflow: auto; margin: auto; }
+  dialog.reg::backdrop { background: rgba(0,0,0,0.75); }
+  .reg-head { background: var(--accent); color: var(--bg); padding: 0.8rem 1.4rem; display: flex; justify-content: space-between; align-items: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.9rem; position: sticky; top: 0; }
+  .reg-close { background: none; border: none; color: var(--bg); font-size: 1.6rem; line-height: 1; cursor: pointer; padding: 0 0.2rem; }
+  .reg-body { padding: 1.4rem; }
+  .reg-steps { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+  .reg-steps b { color: var(--accent); }
+  .field { margin-bottom: 1rem; }
+  .field label, .field legend { display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.4rem; }
+  .field label small, .field legend small { color: var(--muted); font-weight: 500; letter-spacing: 0.04em; text-transform: none; font-family: 'Barlow', sans-serif; }
+  .field input[type=text], .field input[type=email], .field input[type=number] { width: 100%; background: var(--bg); border: 1px solid rgba(245,247,246,0.2); color: var(--text); padding: 0.75rem 0.85rem; font: 400 1rem 'Barlow', sans-serif; border-radius: 0; }
+  .field input:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-color: var(--accent); }
+  .field-row { display: grid; grid-template-columns: 1fr 6.5rem; gap: 0.8rem; }
+  fieldset.field { border: none; }
+  .chips { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+  .chip input { position: absolute; opacity: 0; pointer-events: none; }
+  .chip span { display: inline-block; padding: 0.5rem 0.85rem; border: 1px solid rgba(245,247,246,0.25); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; user-select: none; }
+  .chip input:checked + span { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+  .chip input:focus-visible + span { outline: 2px solid var(--accent-light); outline-offset: 2px; }
+  .reg-error { color: #ff7b7b; font-size: 0.85rem; margin: -0.3rem 0 0.9rem; min-height: 1.1em; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  dialog.reg .btn { width: 100%; }
+  dialog.reg .btn[disabled] { opacity: 0.6; cursor: wait; }
+  .reg-done h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2rem; text-transform: uppercase; line-height: 1; margin-bottom: 0.6rem; }
+  .reg-done h3 em { font-style: normal; color: var(--accent); }
+  .reg-done p { color: var(--muted); line-height: 1.6; margin-bottom: 1.1rem; font-size: 0.95rem; }
+  .reg-done p strong { color: var(--text); font-weight: 500; }
+
   /* Sections */
   section { padding: 5.5rem 3rem; position: relative; }
   .label { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.7rem; }
@@ -323,7 +352,7 @@
           <div><b id="cdS">0</b><small>Sec</small></div>
         </div>
         <a href="#" class="btn btn-primary btn-lg js-register" target="_blank" rel="noopener" id="ticketBtn">Register for $75 →</a>
-        <p class="pay-note">Pay on Venmo <strong>@nolanstoll09</strong>. Put the <strong>player's name and age</strong> in the note. Your spot is held once payment goes through.</p>
+        <p class="pay-note">Fill out a 30-second sign-up form, then pay on Venmo <strong>@nolanstoll09</strong>. Your spot is held once payment goes through.</p>
       </div>
     </aside>
   </div>
@@ -441,7 +470,7 @@
     <div class="faq">
       <details><summary>When and where is camp?</summary><p>Saturday, November 28, from 9:00 AM to 12:00 PM at Old Orchard Park (25023 Avenida Rotella, Valencia, CA 91355). Please arrive about 10 minutes early to check in.</p></details>
       <details><summary>How much does it cost?</summary><p>$75 if you register by Sunday, November 15. After that, it's $90.</p></details>
-      <details><summary>How do I register?</summary><p>Tap any Register button to pay on Venmo (@nolanstoll09). Put the player's name and age in the payment note. Once the payment goes through, the spot is saved.</p></details>
+      <details><summary>How do I register?</summary><p>Tap any Register button and fill in the player's name, age and positions, plus a parent email. Then pay on Venmo (@nolanstoll09). The spot is saved once the payment goes through.</p></details>
       <details><summary>What should my player bring?</summary><p>A glove, a bat, a helmet, cleats or turf shoes, a water bottle, and a snack. Catchers should bring their gear if they have it.</p></details>
       <details><summary>What ages and skill levels is camp for?</summary><p>Players of all levels are welcome. Coaching is adjusted to each player. If you have a question about your player, message Nolan on Instagram.</p></details>
       <details><summary>What is SBC Academy? Do I need it for camp?</summary><p>No, camp is separate. SBC Academy is an optional monthly online membership with weekly training videos in a private Discord. It's a good way to keep working on what you learn at camp.</p></details>
@@ -460,6 +489,42 @@
   </div>
 </section>
 
+<dialog class="reg" id="regDialog" aria-labelledby="regTitle">
+  <div class="reg-head"><span id="regTitle">Fall Camp Sign-Up · Nov 28</span><button class="reg-close" type="button" id="regClose" aria-label="Close">×</button></div>
+  <div class="reg-body">
+    <form id="regForm" novalidate>
+      <p class="reg-steps"><b>Step 1: Sign up</b> &nbsp;·&nbsp; Step 2: Pay on Venmo</p>
+      <div class="field-row">
+        <div class="field"><label for="fName">Player name</label><input type="text" id="fName" name="player_name" autocomplete="off" required maxlength="80" /></div>
+        <div class="field"><label for="fAge">Age</label><input type="number" id="fAge" name="age" inputmode="numeric" min="4" max="22" required /></div>
+      </div>
+      <div class="field"><label for="fEmail">Parent email</label><input type="email" id="fEmail" name="parent_email" autocomplete="email" required maxlength="120" /></div>
+      <fieldset class="field">
+        <legend>Positions <small>(pick all that apply)</small></legend>
+        <div class="chips">
+          <label class="chip"><input type="checkbox" name="pos" value="Pitcher" /><span>Pitcher</span></label>
+          <label class="chip"><input type="checkbox" name="pos" value="Catcher" /><span>Catcher</span></label>
+          <label class="chip"><input type="checkbox" name="pos" value="1B" /><span>1B</span></label>
+          <label class="chip"><input type="checkbox" name="pos" value="2B" /><span>2B</span></label>
+          <label class="chip"><input type="checkbox" name="pos" value="SS" /><span>SS</span></label>
+          <label class="chip"><input type="checkbox" name="pos" value="3B" /><span>3B</span></label>
+          <label class="chip"><input type="checkbox" name="pos" value="Outfield" /><span>Outfield</span></label>
+          <label class="chip"><input type="checkbox" name="pos" value="Not sure yet" /><span>Not sure yet</span></label>
+        </div>
+      </fieldset>
+      <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
+      <p class="reg-error" id="regError" role="alert"></p>
+      <button type="submit" class="btn btn-primary btn-lg" id="regSubmit">Continue to payment →</button>
+    </form>
+    <div class="reg-done" id="regDone" hidden>
+      <p class="reg-steps">Step 1: Sign up ✓ &nbsp;·&nbsp; <b>Step 2: Pay on Venmo</b></p>
+      <h3>You're <em>almost in</em></h3>
+      <p>We got <strong id="doneName">your player</strong>'s info. To hold the spot, send <strong id="donePrice">$75</strong> to Venmo <strong>@nolanstoll09</strong>. The note is filled in for you.</p>
+      <a href="#" class="btn btn-primary btn-lg" id="venmoBtn" target="_blank" rel="noopener">Pay $75 on Venmo →</a>
+    </div>
+  </div>
+</dialog>
+
 <footer>
   <a class="logo" href="#">Stoll <span>Baseball</span></a>
   <p>© 2026 Stoll Baseball · SBC Academy. All rights reserved.</p>
@@ -472,10 +537,14 @@
   const EARLY_END = new Date('2026-11-16T07:59:59Z');
   const CAMP_START = new Date('2026-11-28T17:00:00Z'); // 9 AM Pacific
 
+  // Google Apps Script web app that writes sign-ups into the registrations sheet.
+  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwgrCZjrB0VybmvMwoNFjTZSa-MNAeraN0lznoLAdA1xFq4y6VRCOx-1KN41XwTC4rr/exec';
+  const currentPrice = () => new Date() < EARLY_END ? 75 : 90;
+  const venmoUrl = (amount, who) => `https://venmo.com/${VENMO_USER}?txn=pay&amount=${amount}&note=${encodeURIComponent('Fall Camp Nov 28 - ' + (who || 'Player name & age: '))}`;
+
+  // Fallback href (used only if the sign-up form can't open)
   function setRegisterLinks(amount) {
-    const note = encodeURIComponent('Fall Camp Nov 28 - Player name & age: ');
-    const url = `https://venmo.com/${VENMO_USER}?txn=pay&amount=${amount}&note=${note}`;
-    document.querySelectorAll('.js-register').forEach(a => a.href = url);
+    document.querySelectorAll('.js-register').forEach(a => a.href = venmoUrl(amount));
   }
   setRegisterLinks(new Date() < EARLY_END ? 75 : 90);
 
@@ -518,10 +587,53 @@
   hb.addEventListener('click', () => setNav(!dr.classList.contains('open')));
   dr.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setNav(false)));
 
-  /* ── ANALYTICS: count Register clicks ── */
-  document.querySelectorAll('.js-register').forEach(a => a.addEventListener('click', () => {
-    if (window.gtag) gtag('event', 'register_click', { price: new Date() < EARLY_END ? 75 : 90 });
+  /* ── SIGN-UP FORM → Google Sheet → Venmo ── */
+  const dlg = $('regDialog'), form = $('regForm'), err = $('regError'), submit = $('regSubmit');
+  const track = (name, extra) => { if (window.gtag) gtag('event', name, Object.assign({ price: currentPrice() }, extra)); };
+
+  document.querySelectorAll('.js-register').forEach(a => a.addEventListener('click', ev => {
+    track('register_click');
+    if (!SHEET_URL || typeof dlg.showModal !== 'function') return; // fall back to plain Venmo link
+    ev.preventDefault();
+    form.hidden = false; $('regDone').hidden = true; err.textContent = '';
+    dlg.showModal();
+    setTimeout(() => $('fName').focus(), 50);
   }));
+  $('regClose').addEventListener('click', () => dlg.close());
+  form.addEventListener('input', () => { err.textContent = ''; });
+  dlg.addEventListener('click', ev => { if (ev.target === dlg) dlg.close(); });
+
+  form.addEventListener('submit', async ev => {
+    ev.preventDefault();
+    const name = $('fName').value.trim(), age = $('fAge').value.trim(), email = $('fEmail').value.trim();
+    const positions = [...form.querySelectorAll('input[name=pos]:checked')].map(c => c.value);
+    if (!name) return fail('Please enter the player\'s name.', 'fName');
+    if (!age || +age < 4 || +age > 22) return fail('Please enter the player\'s age.', 'fAge');
+    if (!/^\S+@\S+\.\S+$/.test(email)) return fail('Please enter a valid parent email.', 'fEmail');
+    if (!positions.length) return fail('Pick at least one position (or "Not sure yet").');
+
+    const price = currentPrice();
+    const body = new URLSearchParams({ player_name: name, age, parent_email: email, positions: positions.join(', '), price, website: form.website.value });
+    submit.disabled = true; submit.textContent = 'Saving…'; err.textContent = '';
+    try {
+      // no-cors: Apps Script answers with a redirect the browser can't read, but the row is saved.
+      await fetch(SHEET_URL, { method: 'POST', mode: 'no-cors', body });
+      track('register_submit');
+      $('doneName').textContent = name;
+      $('donePrice').textContent = '$' + price;
+      const vb = $('venmoBtn');
+      vb.textContent = `Pay $${price} on Venmo →`;
+      vb.href = venmoUrl(price, `${name} (age ${age})`);
+      vb.onclick = () => track('venmo_click');
+      form.hidden = true; $('regDone').hidden = false;
+      form.reset();
+    } catch (e) {
+      err.textContent = 'Couldn\'t save that. Check your connection and try again, or DM @stollbaseballcoaching.';
+    } finally {
+      submit.disabled = false; submit.textContent = 'Continue to payment →';
+    }
+  });
+  function fail(msg, focusId) { err.textContent = msg; if (focusId) $(focusId).focus(); }
 </script>
 </body>
 </html>
